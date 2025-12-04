@@ -1,0 +1,12 @@
+[submodule "src/01-kk-system"]
+	path = src/01-kk-system
+	url = https://github.com/KK-FrontEnd/01-kk-system.git
+[submodule "src/02-kk-i18n-system"]
+	path = src/02-kk-i18n-system
+	url = https://github.com/KK-FrontEnd/02-kk-i18n-system.git
+[submodule "src/04-kk-component-mobile"]
+	path = src/04-kk-component-mobile
+	url = https://github.com/KK-FrontEnd/04-kk-component-mobile.git
+[submodule "src/02-kk-i18n-admin"]
+	path = src/02-kk-i18n-admin
+	url = https://github.com/KK-FrontEnd/02-kk-i18n-admin.git

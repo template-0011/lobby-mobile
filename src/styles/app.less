@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: PingFangSC-Regular, sans-serif;
+  background: #090f1e;
+  color-scheme: light;
+  color: #000000;
+  --primary-color: #597ef7;
+  --text-gray-color: #8491a5;
+  --icon-path-color: #000000;
+  --card-bg-color: #ffffff;
+  --kk-card-content-color: #8c8ca8;
+  --icon-tabbar-color: #8491a5;
+  --icon-tabbar-active-color: #597ef7;
+  --tab-title-inactive-color: #8491a5;
+  --tab-title-active-color: var(--primary-color);
+  --normal-text-color: #8491a5;
+  --kk-dialog-title: #26323f;
+  --kk-sidebar-money-text-color: #677684;
+  --kk-sidebar-money-text-color2: #ffaf13;
+  --kk-count-down-text-color: #323233;
+  --kk-swiper-title-text-color: #ffffff;
+  --kk-lottery-ball-text-color: #000000;
+  --kk-game-card-title-color: #555555;
+  --kk-game-card-countdown-color: #999999;
+  --kk-border-color: #00000040;
+  --float-ball-bg: #597ef7;
+  --color-n700: #161d2e;
+  --color-gd-green: rgb(49, 188, 105), rgb(8, 158, 78);
+}
+
+html.dark {
+  background: #1a1a1a;
+  color-scheme: dark;
+  color: #ffffff;
+  --primary-color: #ff780d;
+  --text-gray-color: #a3a3a3;
+  --icon-path-color: #b3b3b3;
+  --card-bg-color: #232229;
+  --kk-card-content-color: #8c8ca8;
+  --icon-tabbar-color: #b3b3b3;
+  --icon-tabbar-active-color: #ffffff;
+  --tab-title-inactive-color: #ffffff;
+  --tab-title-active-color: var(--primary-color);
+  --normal-text-color: #b3b3b3;
+  --kk-dialog-title: #ffffff;
+  --kk-sidebar-money-text-color: #a3a3a3;
+  --kk-sidebar-money-text-color2: #ff780d;
+  --kk-count-down-text-color: #eeeeee;
+  --kk-swiper-title-text-color: #292b31;
+  --kk-lottery-ball-text-color: #677684;
+  --kk-game-card-title-color: #ffffffe6;
+  --kk-game-card-countdown-color: #999999;
+  --kk-border-color: #8491a544;
+}
+
+.lang-body {
+  --kk-language-text-color: #ffffff;
+  --kk-language-bg-color: #192033;
+  --kk-language-item-bg-color: #20283c;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  --safe-area-top: env(safe-area-inset-top, 20px);
+  position: relative;
+  background-color: #090f1e;
+}
+
+#app {
+  height: 100vh;
+  // Dynamic Viewport Units
+  // height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.kkk-app .van-nav-bar {
+  --van-nav-bar-background: var(--kk-body-bg-color);
+  --van-nav-bar-icon-color: #ffffff;
+  --van-nav-bar-title-text-color: #ffffff;
+  --van-border-color: #4b4b4b;
+}
+
+.kkk-app .van-tabs__nav {
+  --van-tabs-nav-background: var(--kk-body-bg-color);
+  --van-tab-text-color: #ffffff;
+}
+
+.kkk-app .van-tab--active {
+  --van-tab-active-text-color: var(--primary-color);
+}
+
+.kk-button {
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  color: var(--primary-color);
+  padding: 3px 20px;
+}
+
+.slide-fadein-left-enter-active,
+.slide-fadein-left-leave-active,
+.slide-fadein-right-enter-active,
+.slide-fadein-right-leave-active {
+  transition:
+    opacity 0.3s,
+    transform 0.4s,
+    -webkit-transform 0.4s;
+}
+
+.slide-fadein-left-enter-from,
+.slide-fadein-right-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.slide-fadein-left-leave-to,
+.slide-fadein-right-enter-from {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+// zoom-fade
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+  transition:
+    transform 0.2s,
+    opacity 0.3s ease-out;
+}
+.zoom-fade-enter-from {
+  opacity: 0;
+  transform: scale(0.92);
+}
+.zoom-fade-leave-to {
+  opacity: 0;
+  transform: scale(1.06);
+}
+// slide-dade
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+// slide-date-top
+.slide-fade-top-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-top-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-top-enter-from,
+.slide-fade-top-leave-to {
+  transform: translateY(-100%);
+  // opacity: 0;
+}
+// fade-scale-top target must be transform-origin: 100% 0;
+.fade-scale-top-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-scale-top-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-scale-top-enter-from,
+.fade-scale-top-leave-to {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.__jivoMobileButton {
+  --jivoMobileOffsetBottom: -100px !important;
+}
+
+:root {
+  --tabbar-active-color: #199cff;
+  --tabbar-inactive-color: #848484;
+  --menu-active-color: #0091ff;
+  --border-gray-color: #cfcfcf;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
+.login-container {
+  color: #677684;
+}
+html.dark .login-container {
+  color: #b3b3b3;
+}
+/* 创建全局防护层 */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--safe-area-top);
+  background: inherit; /* 与页面背景一致 */
+  z-index: 9999; /* 确保覆盖所有元素 */
+  pointer-events: none; /* 不阻挡交互 */
+}

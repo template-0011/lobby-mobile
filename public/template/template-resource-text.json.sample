@@ -1,0 +1,17 @@
+{
+  "text": [
+    {
+	  "tag": "banner des",
+      "pos": "1",
+      "lengthDes": "20-100"
+    }, {
+	  "tag": "banner des",
+      "pos": "2",
+       "lengthDes": "20-100"
+    },{
+	  "tag": "botton des",
+      "pos": "1",
+      "lengthDes": "0-50"
+    }
+  ]
+}

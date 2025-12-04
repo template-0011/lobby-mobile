@@ -1,0 +1,25 @@
+{
+  "image": [
+    {
+	  "tag": "banner",
+      "pos": "1",
+      "sizeDes": "1500*350"
+    },{
+	  "tag": "banner",
+      "pos": "2",
+      "sizeDes": "1500*350"
+    },{
+	  "tag": "botton icon",
+      "pos": "1",
+      "sizeDes": "40*30"
+    },{
+	  "tag": "botton icon",
+      "pos": "2",
+      "sizeDes": "40*30"
+    },{
+	  "tag": "botton icon",
+      "pos": "3",
+      "sizeDes": "40*30"
+    }
+  ]
+}

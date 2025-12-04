@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f6d2d2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#597ef7">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://mlobby.51666.me/img/pwa.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="https://mlobby.51666.me/img/pwa.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="https://mlobby.51666.me/img/pwa.png" />
+    <meta name="msapplication-config" content="none">
+    <link rel="manifest" href="_always_win_/lobby/platform/manifest">
+    <!-- <script>
+      ;(function () {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('dark', true)
+      })()
+    </script> -->
+  </head>
+  <body>
+    <div id="app" class="kkk-app">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <noscript>
+      This website requires JavaScript to function properly.
+      Please enable JavaScript to continue.
+    </noscript>
+  </body>
+</html>
+
+<style>
+  html,
+  body
+  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* 防止移动端双指缩放后出现横向滚动 */
+    max-width: 100vw;
+    margin: 0 auto;
+    background-color: #090f1e;
+  }
+  .body-class {
+    background-color: #000;
+  }
+
+  .lds-ripple,
+  .lds-ripple div {
+    box-sizing: border-box;
+  }
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #2570ff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.8s;
+  }
+
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+    }
+
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+    }
+
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 1;
+    }
+
+    100% {
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+    }
+  }
+</style>
