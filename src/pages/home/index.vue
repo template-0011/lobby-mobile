@@ -7,10 +7,13 @@ import { localImg } from '@/01-kk-system/allUtils/utils'
 import type { IObject } from '@/01-kk-system/allHttp/types/common'
 // import useIframeOpenFunc from '@/04-kk-component-mobile/hooks/useIframeOpenFunc'
 import useAppStore from '@/store/modules/app'
+import useIframeOpenFunc from '@/04-kk-component-mobile/hooks/useIframeOpenFunc'
 
 defineOptions({
   name: 'Home',
 })
+
+const { onClickOuterGame } = useIframeOpenFunc()
 
 const banners = ref<Record<string, any>[]>([])
 
@@ -223,7 +226,14 @@ async function initLotteryCategory() {
       subTitle: '',
     }
   })
+  console.log('lotteryCategoryList.value----', tabMenus.value)
   menusList.value = tabMenus.value
+}
+
+function goToGame(game: IObject) {
+  if (game) {
+    onClickOuterGame(game)
+  }
 }
 
 async function init() {
@@ -255,8 +265,18 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="flex flex-col overflow-hidden overflow-y-auto pb-6 color-#ffffff">
-    <MenuTop :only-game="false" />
+  <div class="min-h-[160px] flex flex-col overflow-hidden overflow-y-auto bg-#e9eef2 pb-6 color-#ffffff">
+    <!-- <MenuTop :only-game="false" /> -->
+    <div class="kk-no-scrollbar mt-3 flex items-center gap-x-2 overflow-x-auto overflow-y-hidden px-2 text-[#224f7c]">
+      <div v-for="item in sportsList" :key="item.outerGamerID" class="min-h-[160px] w-[110px] shrink-0 overflow-hidden rounded-2 bg-white p-2" @click="goToGame(item)">
+        <div class="aspect-ratio-1/1 flex-center rounded-2 bg-gray-100">
+          <img :src="item.icon" alt="" class="h-full w-full">
+        </div>
+        <p class="line-clamp-2 mt-2 text-ellipsis text-14px">
+          {{ item.title }}
+        </p>
+      </div>
+    </div>
     <div>
       <div class="swiper-container py-3">
         <ImageCarousel
@@ -291,7 +311,7 @@ onBeforeMount(() => {
           <img class="pointer-events-none absolute h-95px -right-7 -top-5" src="@/assets/images/home/icon-gift.png" alt="">
         </div>
       </div>
-      <div v-for="(gameItem, index) in menusList" :key="`${index}game`" class="mt-3 py-2 pl-2">
+      <div v-for="(gameItem, index) in menusList" :key="`${index}game`" class="mt-3 rounded-2 bg-white py-2 pl-2 text-[#276aa5]">
         <GameContent :full-data="gameItem" />
       </div>
     </div>

@@ -11,7 +11,7 @@ html {
   background: #090f1e;
   color-scheme: light;
   color: #000000;
-  --primary-color: #597ef7;
+  --primary-color: #276aa5;
   --text-gray-color: #8491a5;
   --icon-path-color: #000000;
   --card-bg-color: #ffffff;
@@ -89,6 +89,17 @@ body {
   background: transparent;
 }
 
+// Hide scrollbars but keep scroll behavior (use on specific scroll containers)
+.kk-no-scrollbar {
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge Legacy
+}
+.kk-no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0; // important for horizontal scrollbar “bottom gap”
+  background: transparent;
+}
+
 .kkk-app .van-nav-bar {
   --van-nav-bar-background: var(--kk-body-bg-color);
   --van-nav-bar-icon-color: #ffffff;
@@ -107,9 +118,9 @@ body {
 
 .kk-button {
   border: 1px solid var(--primary-color);
-  border-radius: 999px;
+  border-radius: 4px;
   color: var(--primary-color);
-  padding: 3px 20px;
+  padding: 6px 20px;
 }
 
 .slide-fadein-left-enter-active,

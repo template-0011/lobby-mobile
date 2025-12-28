@@ -57,8 +57,9 @@ const contentCategoryObj = {
 function getOuterImage(game: IObject) {
   const { outerGamerID, subgameCode, contentCategory } = game || {}
 
-  if (contentCategoryObj[contentCategory]) {
-    const path = `${contentCategoryObj[contentCategory]}-subgame`
+  const type = contentCategoryObj[contentCategory]
+  if (type) {
+    const path = `${type}-subgame`
     const subCode = subgameCode?.toLowerCase()
     const imagepath = localImg(`custom-images/${path}/${outerGamerID}-${subCode}.jpg`)
     if (imagepath.includes('undefined')) {
@@ -145,14 +146,14 @@ onMounted(async () => {
     <div class="card-bottom">
       <div class="flex items-center">
         <img class="mr-1 h-4 w-4 rounded-2" :src="getIcon(item)" alt="">
-        <p class="grow-1 overflow-hidden text-overflow pr-6px text-nowrap text-10px color-#667697 font-500 leading-5">
+        <p class="grow-1 overflow-hidden text-overflow pr-6px text-nowrap text-10px color-[#224f7c] font-500 leading-5">
           {{ outerGamerName }}
         </p>
         <div class="h-4 w-4 flex-center color-#E9AB0F" :style="{ color: isFavorite ? '#E9AB0F' : '#2c3756' }" @click.stop="onStar(item)">
           <svg-icon icon-class="icon-star" />
         </div>
       </div>
-      <p class="mt-1 overflow-hidden text-overflow text-14px color-#ffffff font-700 leading-5">
+      <p class="mt-1 overflow-hidden text-overflow text-14px color-[#224f7c] font-700 leading-5">
         {{ item.subgameDes || item.lottoName }}
       </p>
     </div>
@@ -163,8 +164,8 @@ onMounted(async () => {
 .list-card-keep-px {
   width: 100%;
   cursor: pointer;
-  -webkit-mask-image: radial-gradient(#fff, #000);
-  mask-image: radial-gradient(#fff, #000);
+  -webkit-mask-image: radial-gradient(#898888, #000);
+  mask-image: radial-gradient(#a8a5a5, #000);
   overflow: hidden;
   position: relative;
   z-index: 2;

@@ -54,13 +54,13 @@ function onSwiper(swiper: any) {
 
 <template>
   <div class="kk-swiper-c">
-    <div v-if="title" class="relative mx-2 mb-4 h-30px flex items-center justify-between color-white">
+    <div v-if="title" class="relative mx-2 mb-4 h-30px flex items-center justify-between color-[#224f7c]">
       <div class="title flex items-center gap-2 py-2 text-base font-600">
-        <div class="bg-01 h-30px w-30px flex-center rounded-2 bg-[#2c3756] color-white">
+        <div class="bg-01 h-30px w-30px flex-center rounded-2 bg-[#2c3756] color-[#224f7c]">
           <svg-icon
             :icon-class="icon"
             size="20px"
-            class="h-5 w-5 transition"
+            class="h-5 w-5 color-white transition"
           />
         </div>
         <p class="text-5 font-700 transition">
@@ -68,7 +68,7 @@ function onSwiper(swiper: any) {
         </p>
       </div>
       <div class="flex items-center gap-1 text-12px" @click="emit('onClickRight')">
-        <div class="text-right text-13px color-#0085ff font-500">
+        <div class="text-right text-13px color-[#224f7c] font-500">
           {{ $t('system.i18nSystem.label.all') }}
         </div>
         <!-- <div class="text-11px color-[#94a6cd] lowercase">

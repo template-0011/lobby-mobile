@@ -98,7 +98,7 @@ onMounted(() => {
     </template>
     <template v-if="loading">
       <div class="flex-center">
-        <van-loading color="#1989fa" />
+        <van-loading color="#276aa5" />
       </div>
     </template>
   </div>

@@ -38,9 +38,9 @@ function onClickUser() {
 </script>
 
 <template>
-  <div class="h-60px flex items-center justify-between overflow-hidden border-b-1 border-b-[#141b2e] border-b-solid px-3">
+  <div class="sticky top-0 z-100 h-60px flex items-center justify-between overflow-hidden border-b-1 border-b-[#141b2e] border-b-solid bg-[#205583] px-3">
     <KKLogo />
-    <div v-if="!isLoggedIn" class="flex items-center">
+    <div v-if="!isLoggedIn" class="flex shrink-0 items-center">
       <button class="kk-login-btn kk-button mr-10px text-12px !border-none !py-6px" @click="onShowLogin">
         <span class="color-white">
           {{ $t("system.i18nSystem.opration.login") }}
@@ -78,12 +78,12 @@ function onClickUser() {
 
 <style lang="less" scoped>
 .kk-login-btn {
-  background-image: linear-gradient(to bottom right, #0095ff, #0855c4);
+  background-image: linear-gradient(to bottom right, #276aa5, #276aa5);
   box-shadow: 0 6px 22px #056dda4d;
 }
 
 .kk-register-btn {
-  background-image: linear-gradient(80deg, #31bc69 -8%, #089e4e 93%);
+  background-image: linear-gradient(80deg, #7eac2f -8%, #7eac2f 93%);
   box-shadow: 0 6px 18px #0ea1514d;
 }
 .recharge-btn {
@@ -97,6 +97,6 @@ function onClickUser() {
   justify-content: center;
   overflow: hidden;
   border-radius: 6px;
-  background-color: #1f2841;
+  background-color: #276aa5;
 }
 </style>

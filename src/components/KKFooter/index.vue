@@ -5,7 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <div class="mt-12 pb-20">
+  <div class="mt-12 pb-20 text-white">
     <div class="footer flex flex-col">
       <div class="flex flex-1 items-stretch">
         <div class="left w-[60%] flex shrink-0 flex-col items-center justify-end pb-7">

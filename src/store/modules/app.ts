@@ -20,6 +20,7 @@ function getAllUILibLanguage() {
 
 const useAppStore = defineStore('app', () => {
   const language = useStorage(CURRENT_LANGUAGE, getLanguage())
+  const showTopBar = useStorage('kk_show_top_bar', true)
   const sidebarOpen = ref(false)
   const logo = ref('')
   const favicon = ref('')
@@ -148,17 +149,23 @@ const useAppStore = defineStore('app', () => {
     }
   }
 
+  const setShowTopBar = (value: boolean) => {
+    showTopBar.value = value
+  }
+
   return {
     sidebarOpen,
     language,
     locale,
     activeMenu,
+    showTopBar,
     changeLanguage,
     toggleSidebar,
     getAppLogoByCode,
     getAppBanners,
     getPlatformConfig,
     getDiffConfig,
+    setShowTopBar,
   }
 }, {
   persist: true,

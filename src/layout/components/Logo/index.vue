@@ -32,7 +32,7 @@ onBeforeMount(() => {
 <template>
   <div class="mr-4 max-h-60px min-w-100px flex items-center">
     <a class="flex-center" href="javascript:void(0)" @click="goHome">
-      <img v-if="logo" class="h-7 object-contain" :src="logo" alt="">
+      <img v-if="logo" class="h-full object-contain" :src="logo" alt="">
     </a>
   </div>
 </template>

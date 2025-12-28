@@ -12,6 +12,7 @@ import { useGameStore } from './store/modules/game'
 import { transOut2System } from '@/04-kk-component-mobile/hooks/commonUtil'
 import { localImg } from '@/01-kk-system/allUtils/utils'
 import PwaModal from '@/04-kk-component-mobile/PwaModal/index.vue'
+import TopBar from '@/components/TopBar/index.vue'
 
 const userStore = useUserStore()
 const chatStore = useChatStore()
@@ -56,7 +57,7 @@ async function init() {
   getIosPwaThumb()
   appStore.getPlatformConfig()
   await Promise.allSettled([
-    chatStore.loadChat(), // 客服
+    chatStore.loadChat(true), // 客服
     appStore.getDiffConfig(), // 差异化
     gameStore.fetchAllGroups(), // 游戏分组
     gameStore.getOuterGamerList(), // 外游游戏列表
@@ -113,6 +114,7 @@ onMounted(() => {
     <SvgDefs />
     <van-nav-bar style="--van-nav-bar-height:0;overflow:hidden;" safe-area-inset-top />
     <div class="box-border h-full max-w-600px w-full w-screen flex flex-col justify-start overflow-hidden">
+      <TopBar />
       <router-view v-slot="{ Component, route }" class="flex-1">
         <keep-alive :include="keepAliveRouteNames">
           <component :is="Component" :key="route.name" />
