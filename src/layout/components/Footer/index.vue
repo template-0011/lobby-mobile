@@ -112,7 +112,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <footer class="mx-auto min-h-200px w-1200px p-30px color-[var(--kk-footer-text-color)]">
+  <footer class="mx-auto min-h-200px w-1200px bg-[#1d4268] p-30px text-white">
     <div class="mb-12 flex items-center">
       <div class="h-5 min-w-12">
         <img v-if="logo" :src="logo" alt="logo" class="h-full w-full object-contain">
@@ -121,7 +121,7 @@ onBeforeMount(() => {
     </div>
     <div class="w-full">
       <div class="mr-35px grow-[0.2] text-12px leading-14px">
-        <h5 class="mb-2 text-10px color-[#5a647a]">
+        <h5 class="mb-2 text-10px text-white">
           我们
         </h5>
         <ul class="flex flex-wrap gap-2 color-white">
@@ -260,7 +260,7 @@ onBeforeMount(() => {
 <style lang="less" scoped>
 footer {
   width: 100%;
-  background-color: var(--kk-body-bg-color);
+  background-color: #1d4268;
   font-size: 13px;
 }
 .kk-divider-line {

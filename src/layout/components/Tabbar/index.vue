@@ -136,8 +136,8 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .kk-tabbar-class {
-  --van-tabbar-background: #090f1e;
-  --van-tabbar-item-active-background: #090f1e;
+  --van-tabbar-background: #ffffff;
+  --van-tabbar-item-active-background: #536387;
   --van-tabbar-item-text-color: #536387;
   --van-tabbar-item-active-color: #ffffff;
   --van-border-color: #090f1e;

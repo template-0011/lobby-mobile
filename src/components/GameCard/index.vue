@@ -57,6 +57,7 @@ const contentCategoryObj = {
 function getOuterImage(game: IObject) {
   const { outerGamerID, subgameCode, contentCategory } = game || {}
 
+  console.log('contentCategory----', contentCategory)
   const type = contentCategoryObj[contentCategory]
   if (type) {
     const path = `${type}-subgame`

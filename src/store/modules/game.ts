@@ -178,7 +178,8 @@ export const useGameStore = defineStore('game', () => {
       return allGroups.value
     }
     const list = await getAllGroups(params)
-    const groupList = (list as unknown as TopMenuType[] || []).map((group: any) => {
+    const groupList = (list as unknown as TopMenuType[] || []).map((group: any, index: number) => {
+      const iconIndex = index % 5
       return {
         id: group.groupID,
         title: group.groupName,
@@ -186,7 +187,7 @@ export const useGameStore = defineStore('game', () => {
         route: `/group/${group.groupID}`,
         routeName: `${group.groupID}`,
         css: '',
-        image: localImg('images/icon_hot.png'),
+        image: localImg(`images/hot/top-${iconIndex}.png`),
         isGrooup: true,
         icon: 'icon_game_hot',
         data: group.children,

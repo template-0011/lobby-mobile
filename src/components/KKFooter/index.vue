@@ -5,7 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <div class="mt-12 pb-20 text-white">
+  <div class="mt-12 bg-[#1d4268] pb-20 text-white">
     <div class="footer flex flex-col">
       <div class="flex flex-1 items-stretch">
         <div class="left w-[60%] flex shrink-0 flex-col items-center justify-end pb-7">
@@ -43,12 +43,12 @@ defineOptions({
 <style lang="less" scoped>
 .footer {
   height: 240px;
-  background: transparent url(@/assets/images/bg/bg_light.png) no-repeat;
+  background: #1d4268;
   background-size: cover;
 }
 
 html.dark .footer {
-  background: transparent url(@/assets/images/bg/bg2_dark.png) no-repeat;
+  background: #1d4268;
   background-size: cover;
 }
 </style>
